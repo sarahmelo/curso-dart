@@ -1,0 +1,17 @@
+funcao(p1, p2) {
+    //10s -> p1
+    sentenca 01
+    sentenca 02
+    sentenca 03
+
+    //1s -> p2
+    sentenca 01
+    sentenca 02
+}
+
+var funcaoComParam3 = funcao(3) // 10s
+funcaoComParam3(17);    //1s
+funcaoComParam3(15);    //1s
+funcaoComParam3(16);    //1s
+
+total : 13s;
