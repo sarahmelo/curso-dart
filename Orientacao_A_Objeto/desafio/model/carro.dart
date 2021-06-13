@@ -1,31 +1,28 @@
 class Carro {
-  final int velocidadeMaxima;
-  int? velocidadeAtual = 0;
+  final int velocidadeM;
+  int? velocidadeA = 0;
 
-  //Dentro do parâmetro você define a velocidade máxima a ser passada
-  Carro([this.velocidadeMaxima = 200]);
+  Carro([this.velocidadeM = 200]);
 
-  //A função retorna um valor inteiro
-  int? aceleracao() {
-    if (velocidadeAtual! + 5 >= velocidadeMaxima) {
-      velocidadeAtual = velocidadeMaxima;
+  int aceleracao() {
+    if (velocidadeA! + 5 >= velocidadeM) {
+      velocidadeA = velocidadeM;
     } else {
-      velocidadeAtual = velocidadeAtual! + 5;
-      print(velocidadeAtual);
+      velocidadeA = velocidadeA! + 5;
     }
-    return velocidadeAtual;
+    return velocidadeA!;
   }
 
-  int? freiar() {
-    if (velocidadeAtual! - 5 <= 0) {
-      velocidadeAtual = 0;
+  int freio() {
+    if (velocidadeA! - 5 <= 0) {
+      velocidadeA = 0;
     } else {
-      velocidadeAtual = velocidadeAtual! - 5;
+      velocidadeA = velocidadeA! - 5;
     }
-    return velocidadeAtual;
+    return velocidadeA!;
   }
 
-  bool? limite() {
-    return velocidadeAtual == velocidadeMaxima;
+  bool limite() {
+    return velocidadeA == velocidadeM;
   }
 }
