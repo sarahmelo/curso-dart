@@ -12,7 +12,7 @@ class Carro {
 
   void set velocidadeA(int novaVelocidade) {
     bool deltaValido = (_velocidadeA! - novaVelocidade).abs() <= 5;
-    if (deltaValido && novaVelocidade >= 0) {
+    if (deltaValido && novaVelocidade >= 0 && novaVelocidade > velocidadeM) {
       this._velocidadeA = novaVelocidade;
     }
   }
